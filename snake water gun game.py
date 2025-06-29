@@ -1,5 +1,8 @@
 import random
 def gamewin(comp,your):
+    if your != 'w' or your != 'g'or your != 's':
+        raise Exception("Sorry, you have entered wrong choice")
+        
     if comp==your:
         return None
     elif comp=='s':
@@ -27,7 +30,7 @@ elif randomno==2:
 elif randomno==3:
     comp='g'
 
-your= input("your turn: snake(s) water(w) gun(g)")
+your= input("your turn: snake(s) water(w) gun(g) (plzz enter either s or w or g)")
 
 a=gamewin(comp,your)
 
